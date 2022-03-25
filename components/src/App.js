@@ -16,6 +16,7 @@ function App() {
   const [inputFileData, setInputFileData] = React.useState(''); // represented as bytes data (string)
   const [outputFileData, setOutputFileData] = React.useState(''); // represented as readable data (text string)
   const [buttonDisable, setButtonDisable] = React.useState(true);
+  const [outputFileDatarmse, setOutputFileDatarmse] = React.useState('');
   const [buttonText, setButtonText] = React.useState('Submit');
 
   // convert file to bytes data
@@ -68,7 +69,7 @@ function App() {
     fetch('<api-url>', {
       method: 'POST',
       headers: { "Content-Type": "application/json", "Accept": "text/plain" },
-      body: JSON.stringify({ "image": inputFileData })
+      body: JSON.stringify({ "csv": inputFileData })
     }).then(response => response.json())
     .then(data => {
       console.log('getting response...')
@@ -82,8 +83,10 @@ function App() {
 
       // POST request success
       else {
-        const outputBytesData = JSON.parse(data.body)['outputResultsData'];
-        setOutputFileData(decodeFileBase64(outputBytesData));
+            const outputBytesData = JSON.parse(data.body)['outputResultsData'];
+            setOutputFileData(outputBytesData);
+            const outputBytesDatarmse = JSON.parse(data.body)['outputResultsDatarmse'];
+            setOutputFileDatarmse(decodeFileBase64(outputBytesDatarmse))
       }
 
       // re-enable submit button
@@ -100,13 +103,14 @@ function App() {
       <div className="Input">
         <h1>Input</h1>
         <form onSubmit={handleSubmit}>
-          <input type="file" accept=".png" onChange={handleChange} />
+          <input type="file" accept=".txt" onChange={handleChange} />
           <button type="submit" disabled={buttonDisable}>{buttonText}</button>
         </form>
-      </div>
-      <div className="Output">
+        <img src={`data:;base64,${outputFileData}`} alt="12323" />
+       </div>
+       <div className="Output">
         <h1>Results</h1>
-        <p>{outputFileData}</p>
+        <p>{outputFileDatarmse}</p>
       </div>
     </div>
   );
