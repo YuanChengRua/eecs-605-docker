@@ -66,7 +66,7 @@ function App() {
 
     // make POST request
     console.log('making POST request...');
-    fetch('https://uuczqrd2wd.execute-api.us-east-1.amazonaws.com/prod', {
+    fetch('https://09i6tuk9la.execute-api.us-east-1.amazonaws.com/prod/', {
       method: 'POST',
       headers: { "Content-Type": "application/json", "Accept": "text/plain" },
       body: JSON.stringify({ "csv": inputFileData })
