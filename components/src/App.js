@@ -101,7 +101,7 @@ function App() {
   return (
     <div className="App">
       <div className="Input">
-        <h1>Input</h1>
+        <h1>Yuan Cheng EECS-605 Project</h1>
         <form onSubmit={handleSubmit}>
           <input type="file" accept=".txt" onChange={handleChange} />
           <button type="submit" disabled={buttonDisable}>{buttonText}</button>
