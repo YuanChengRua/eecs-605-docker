@@ -42,14 +42,14 @@ function App() {
     setOutputFileData("");
 
     console.log('newly uploaded file');
-    const inputFile = event.target.files[0];
+    const inputFile = event.target.value;
     console.log(inputFile);
 
     // convert file to bytes data
-    const base64Data = await convertFileToBytes(inputFile);
-    const base64DataArray = base64Data.split('base64,'); // need to get rid of 'data:image/png;base64,' at the beginning of encoded string
-    const encodedString = base64DataArray[1];
-    setInputFileData(encodedString);
+//     const base64Data = await convertFileToBytes(inputFile);
+//     const base64DataArray = base64Data.split('base64,'); // need to get rid of 'data:image/png;base64,' at the beginning of encoded string
+//     const encodedString = base64DataArray[1];
+    setInputFileData(inputFile);
     console.log('file converted successfully');
 
     // enable submit button
@@ -103,7 +103,7 @@ function App() {
       <div className="Input">
         <h1>Yuan Cheng EECS-605 Project</h1>
         <form onSubmit={handleSubmit}>
-          <input type="file" accept='.txt' onChange={handleChange} />
+          <input type="text" onChange={handleChange} />
           <button type="submit" disabled={buttonDisable}>{buttonText}</button>
         </form>
         <img src={`data:;base64,${outputFileData}`} alt="12323" />
