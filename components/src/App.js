@@ -103,7 +103,7 @@ function App() {
       <div className="Input">
         <h1>Yuan Cheng EECS-605 Project</h1>
         <form onSubmit={handleSubmit}>
-          <input type="file" accept='.csv' onChange={handleChange} />
+          <input type="file" accept='.txt' onChange={handleChange} />
           <button type="submit" disabled={buttonDisable}>{buttonText}</button>
         </form>
         <img src={`data:;base64,${outputFileData}`} alt="12323" />
