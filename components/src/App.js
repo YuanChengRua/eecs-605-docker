@@ -178,7 +178,7 @@ function App() {
       </div>
       <div className="Output">
         <h1>Results</h1>
-        <p>{outputFileDatarmse}</p>
+        <p>{OutputFileDatarmse}</p>
       </div>
     </div>
   );
