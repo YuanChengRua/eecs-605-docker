@@ -88,7 +88,7 @@ function App() {
 
     // temporarily disable submit button
     setButtonDisable(true);
-    submitButtonText('Loading Result');
+    setSubmitButtonText('Loading Result');
 
     // make POST request
     console.log('making POST request...');
