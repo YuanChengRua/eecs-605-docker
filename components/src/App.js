@@ -162,7 +162,7 @@ function App() {
 
   return (
     <div className="App">
-      <div className="Input">
+      <div className="Yuan Cheng Final Project">
         <h1>Input</h1>
         <label htmlFor="demo-dropdown">Demo: </label>
         <select name="Select Image" id="demo-dropdown" value={selectedDropdownFile} onChange={handleDropdown}>
@@ -178,7 +178,7 @@ function App() {
       </div>
       <div className="Output">
         <h1>Results</h1>
-        <p>{outputFileData}</p>
+        <p>{outputFileDatarmse}</p>
       </div>
     </div>
   );
