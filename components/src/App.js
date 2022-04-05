@@ -170,7 +170,7 @@ function App() {
         </select>
         <form onSubmit={handleSubmit}>
           <label htmlFor="file-upload">{fileButtonText}</label>
-          <input type="file" id="file-upload" onChange={handleChange} />
+          <input type="text" onChange={handleChange} />
           <button type="submit" disabled={buttonDisable}>{submitButtonText}</button>
         </form>
         <img src={inputImage} alt="" />
@@ -182,5 +182,6 @@ function App() {
     </div>
   );
 }
+
 
 export default App;
