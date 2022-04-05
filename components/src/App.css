@@ -56,9 +56,10 @@
 
 .Output {
   margin: 16px;
-  width: 3000px;
+  width: 300px;
 }
 
 .Output h1 {
   text-align: center;
+  width: 3000px;
 }
