@@ -117,7 +117,7 @@ function App() {
 
       // re-enable submit button
       setButtonDisable(false);
-      submitButtonText('Submit');
+      setSubmitButtonText('Submit');
     })
     .then(() => {
       console.log('POST request success');
