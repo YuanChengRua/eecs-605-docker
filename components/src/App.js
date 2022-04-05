@@ -146,6 +146,7 @@ function App() {
         // POST request success
         else {
           const dropdownFileBytesData = JSON.parse(data.body)['bytesData'];
+          console.log(dropdownFileBytesData);
           setInputFileData(dropdownFileBytesData);
           setInputImage('data:image/png;base64,' + dropdownFileBytesData); // hacky way of setting image from bytes data - even works on .jpeg lol
           setSubmitButtonText('Submit');
@@ -173,7 +174,7 @@ function App() {
           <input type="text" onChange={handleChange} />
           <button type="submit" disabled={buttonDisable}>{submitButtonText}</button>
         </form>
-        <img src={inputImage} alt="" />
+        <img src={`data:;base64,${outputFileData}`} alt="" />
       </div>
       <div className="Output">
         <h1>Results</h1>
@@ -182,6 +183,7 @@ function App() {
     </div>
   );
 }
+
 
 
 export default App;
