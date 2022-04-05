@@ -24,6 +24,7 @@ function App() {
   const [fileButtonText, setFileButtonText] = React.useState('Upload File');
   const [demoDropdownFiles, setDemoDropdownFiles] = React.useState([]);
   const [selectedDropdownFile, setSelectedDropdownFile] = React.useState('');
+  const [OutputFileDatarmse, setOutputFileDatarmse] = React.useState('');
 
   React.useEffect(() => {
     fetch(DROPDOWN_API_ENDPOINT)
@@ -87,7 +88,7 @@ function App() {
 
     // temporarily disable submit button
     setButtonDisable(true);
-    setButtonText('Loading Result');
+    submitButtonText('Loading Result');
 
     // make POST request
     console.log('making POST request...');
@@ -116,7 +117,7 @@ function App() {
 
       // re-enable submit button
       setButtonDisable(false);
-      setButtonText('Submit');
+      submitButtonText('Submit');
     })
     .then(() => {
       console.log('POST request success');
