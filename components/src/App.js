@@ -162,8 +162,8 @@ function App() {
 
   return (
     <div className="App">
-      <div className="Yuan Cheng Final Project">
-        <h1>Input</h1>
+      <div className="Input">
+        <h1>Yuan Cheng Final Project</h1>
         <label htmlFor="demo-dropdown">Demo: </label>
         <select name="Select Image" id="demo-dropdown" value={selectedDropdownFile} onChange={handleDropdown}>
             <option value="">-- Select Demo File --</option>
