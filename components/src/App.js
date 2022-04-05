@@ -161,16 +161,22 @@ function App() {
   return (
     <div className="App">
       <div className="Input">
-        <h1>Yuan Cheng EECS-605 Project</h1>
+        <h1>Input</h1>
+        <label htmlFor="demo-dropdown">Demo: </label>
+        <select name="Select Image" id="demo-dropdown" value={selectedDropdownFile} onChange={handleDropdown}>
+            <option value="">-- Select Demo File --</option>
+            {demoDropdownFiles.map((file) => <option key={file} value={file}>{file}</option>)}
+        </select>
         <form onSubmit={handleSubmit}>
-          <input type="text" onChange={handleChange} />
-          <button type="submit" disabled={buttonDisable}>{buttonText}</button>
+          <label htmlFor="file-upload">{fileButtonText}</label>
+          <input type="file" id="file-upload" onChange={handleChange} />
+          <button type="submit" disabled={buttonDisable}>{submitButtonText}</button>
         </form>
-        <img src={`data:;base64,${outputFileData}`} alt="12323" />
-       </div>
-       <div className="Output">
+        <img src={inputImage} alt="" />
+      </div>
+      <div className="Output">
         <h1>Results</h1>
-        <p>{outputFileDatarmse}</p>
+        <p>{outputFileData}</p>
       </div>
     </div>
   );
