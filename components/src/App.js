@@ -171,8 +171,8 @@ function App() {
             {demoDropdownFiles.map((file) => <option key={file} value={file}>{file}</option>)}
         </select>
         <form onSubmit={handleSubmit}>
-          <h2>Please enter your interested stock name</h2>
           <label htmlFor="file-upload">{fileButtonText}</label>
+          <h2>Please enter your interested stock name</h2>
           <input type="text" onChange={handleChange} />
           <button type="submit" disabled={buttonDisable}>{submitButtonText}</button>
         </form>
