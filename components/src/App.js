@@ -164,12 +164,14 @@ function App() {
     <div className="App">
       <div className="Input">
         <h1>Yuan Cheng Final Project</h1>
+        <h2>Please select the stored examples here</h2>
         <label htmlFor="demo-dropdown">Demo: </label>
         <select name="Select Image" id="demo-dropdown" value={selectedDropdownFile} onChange={handleDropdown}>
             <option value="">-- Select Demo File --</option>
             {demoDropdownFiles.map((file) => <option key={file} value={file}>{file}</option>)}
         </select>
         <form onSubmit={handleSubmit}>
+          <h2>Please enter your interested stock name</h2>
           <label htmlFor="file-upload">{fileButtonText}</label>
           <input type="text" onChange={handleChange} />
           <button type="submit" disabled={buttonDisable}>{submitButtonText}</button>
