@@ -165,7 +165,7 @@ function App() {
       <div className="Input">
         <h1>Yuan Cheng Final Project</h1>
         <a href="https://github.com/YuanChengRua/eecs-605-docker/blob/main/components/Technical%20Report.pdf">Click here to check the technical report</a>
-        <a href="https://github.com/YuanChengRua/eecs-605-docker/blob/main/components/final_project.mp4">Click here to check the presentation video</a>
+        <a href="https://github.com/YuanChengRua/EECS-605-project/blob/main/final_project.mp4">Click here to check the presentation video</a>
         <h2>Please select the stored examples here</h2>
         <label htmlFor="demo-dropdown">Demo: </label>
         <select name="Select Image" id="demo-dropdown" value={selectedDropdownFile} onChange={handleDropdown}>
